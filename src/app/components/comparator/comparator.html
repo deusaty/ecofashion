@@ -1,1 +1,39 @@
-<p>comparator works!</p>
+<div class="container section">
+  <h4 class="green-text text-darken-3">Comparador Ambiental EcoFashion</h4>
+  
+  <div class="row card-panel z-depth-2">
+    <div class="input-field col s12 m4">
+      <input type="number" id="mass" [(ngModel)]="textileService.mass" />
+      <label for="mass" class="active">Masa de la prenda (kg)</label>
+    </div>
+    
+    <div class="input-field col s12 m4">
+      <select class="browser-default" [(ngModel)]="textileService.selectedA">
+        <option [ngValue]="null" disabled selected>Selecciona Material A</option>
+        <option *ngFor="let t of textileService.textiles()" [ngValue]="t">
+          {{ t.name }}
+        </option>
+      </select>
+    </div>
+
+    <div class="input-field col s12 m4">
+      <select class="browser-default" [(ngModel)]="textileService.selectedB">
+        <option [ngValue]="null" disabled selected>Selecciona Material B</option>
+        <option *ngFor="let t of textileService.textiles()" [ngValue]="t">
+          {{ t.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="textileService.mass() > 0">
+    <div class="col s12 center-align">
+      <p class="grey-text">Comparación basada en {{ textileService.mass() }} kg de material.</p>
+      <canvas baseChart 
+              [data]="chartData" 
+              [options]="chartOptions" 
+              [type]="'bar'">
+      </canvas>
+    </div>
+  </div>
+</div>

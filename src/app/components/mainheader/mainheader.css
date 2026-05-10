@@ -1,12 +1,13 @@
 .mainHeader {
-    background-color: white;
+    background-color: transparent; /* Cambiado de white para poder ver el video */
     height: 100vh;
     width: 100%;
     padding: 16px 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    position: relative;
+    overflow: hidden;
 }
 
 .title {
@@ -15,25 +16,47 @@
 }
 
 .btnHeader {
-background-color: #506146;
-color: #FFF;
-font-weight: bold;
-padding: 16px;
-border-width: 0px;
-border-radius: 16px;
-text-transform: uppercase;
+    background-color: #506146;
+    color: #FFF;
+    font-weight: bold;
+    padding: 16px;
+    border-width: 0px;
+    border-radius: 16px;
+    text-transform: uppercase;
 }
 
 .mainheaderInfo {
     color: #444840;
-    font-size: 18px;
+    font-size: 1.5em;
 }
 
 .infoContainer {
-width: 50%;
-
+    width: 50%;
+    position: relative;
+    z-index: 2; 
 }
 
-.buttonContainer {
+.videoBackground {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* ESTA ES LA LÍNEA CLAVE: */
+  background: linear-gradient(to right, 
+    rgba(255, 255, 255, 1) 0%,    /* Blanco total a la izquierda */
+    rgba(255, 255, 255, 0.8) 40%,  /* Empieza a desvanecerse a los 40% */
+    rgba(255, 255, 255, 0) 100%   /* Transparente total a la derecha */
+  );
+  z-index: -1; 
 }
