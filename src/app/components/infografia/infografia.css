@@ -1,0 +1,27 @@
+.infografiaGreen {
+    display: flex;
+    align-items: stretch;
+    padding: 20px;
+    gap: 16px;
+}
+
+h5 {
+    font-weight: bold;
+
+}
+
+.infografiaPie {
+    border-top-width: 1px;
+    border-top-style: solid;
+    border-top-color: #ccc;
+}
+
+.infografiaBox {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #A1A1A1;
+    background-color: #D5E5F1;
+    border-radius: 10px;
+    padding: 16px;
+    flex: 1;
+}

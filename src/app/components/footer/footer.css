@@ -1,0 +1,54 @@
+.footerContainer {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  width: 100%;
+  padding: 16px;
+  background-color: #009688;
+  align-items: center;
+  justify-content: space-around;
+}
+
+a {
+  display: block;
+}
+
+.redesSocialesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.redesSocialesContainer a {
+  text-align: left;
+}
+
+.footerItem {
+
+}
+
+h5 {
+  color: white;
+  font-weight: bold;
+
+}
+
+p {
+  color: white;
+  font-size: 16px;
+}
+
+.colorFooter {
+    color: black;
+    font-weight: 400;
+}

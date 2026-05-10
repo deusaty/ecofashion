@@ -1,0 +1,39 @@
+.mainHeader {
+    background-color: white;
+    height: 100vh;
+    width: 100%;
+    padding: 16px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.title {
+    color: #506146;
+    font-weight: bold;
+}
+
+.btnHeader {
+background-color: #506146;
+color: #FFF;
+font-weight: bold;
+padding: 16px;
+border-width: 0px;
+border-radius: 16px;
+text-transform: uppercase;
+}
+
+.mainheaderInfo {
+    color: #444840;
+    font-size: 18px;
+}
+
+.infoContainer {
+width: 50%;
+
+}
+
+.buttonContainer {
+
+}
