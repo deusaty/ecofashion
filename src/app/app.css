@@ -2,3 +2,38 @@ html {
   scroll-behavior: smooth;
 }
 
+.parallax-container {
+  height: 400px;
+}
+
+@media only screen and (max-width: 992px) {
+  .parallax-container {
+    height: 350px;
+    /* Reducimos la altura para que la imagen no se sature */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .parallax-container {
+    height: 250px;
+    /* Una franja ideal para móviles */
+  }
+
+  .parallax img {
+    width: 100% !important;
+    object-fit: cover !important;
+    /* Evita que el script de Materialize mueva la imagen de forma brusca en iOS */
+    transform: translate3d(-50%, 0, 0) !important;
+    bottom: 0 !important;
+  }
+
+  /* Controlar el comportamiento de la imagen dentro del parallax */
+  .parallax-container .parallax img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    /* Fuerza a la imagen a cubrir el espacio manteniendo su proporción */
+    object-position: center center !important;
+    /* Centra el foco de la imagen */
+  }
+}
