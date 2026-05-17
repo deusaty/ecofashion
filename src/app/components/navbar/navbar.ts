@@ -3,19 +3,20 @@ import * as M from 'materialize-css';
 
 @Component({
   selector: 'app-navbar',
-  imports: [],
+  standalone: true,
   templateUrl: './navbar.html',
-  styleUrl: './navbar.css',
+  styleUrl: './navbar.css'
 })
-export class Navbar implements AfterViewInit {
+export class NavbarComponent implements AfterViewInit {
 
-  ngAfterViewInit(): void {
-  
+  ngAfterViewInit() {
+    // Buscamos todos los elementos con la clase .sidenav
     const elems = document.querySelectorAll('.sidenav');
-    const instances = M.Sidenav.init(elems, {
-      edge: 'left',
-      draggable: true
+    
+    // Los inicializamos con la librería de Materialize
+    M.Sidenav.init(elems, {
+      edge: 'left',      // Sale de la izquierda
+      draggable: true    // Permite arrastrarlo con el dedo en celular
     });
   }
-
 }
