@@ -4,13 +4,14 @@ html {
 
 /* --- CONFIGURACIÓN GENERAL (ESCRITORIO) --- */
 .parallax-container {
-  height: 150px; /* Altura a la mitad en computadoras */
+  height: 150px;
+  /* Altura a la mitad en computadoras */
 
 }
 
 /* Forzamos la opacidad aquí con !important para que el JS de Materialize no la rompa al actualizar */
 .parallax img {
-  opacity: 0.5 !important; 
+  opacity: 0.5 !important;
   width: 100% !important;
   object-fit: cover !important;
 }
@@ -19,7 +20,8 @@ html {
 /* --- ADAPTACIÓN A PANTALLAS MEDIANAS (TABLETS) --- */
 @media only screen and (max-width: 992px) {
   .parallax-container {
-    height: 120px; /* Altura más cómoda para tablets */
+    height: 120px;
+    /* Altura más cómoda para tablets */
   }
 }
 
@@ -27,14 +29,18 @@ html {
 /* --- ADAPTACIÓN A PANTALLAS CHICAS (MÓVILES) --- */
 @media only screen and (max-width: 600px) {
   .parallax-container {
-    height: 70px !important; /* Forzamos la altura pequeña en celular para ganarle al HTML */
+    height: 70px !important;
+    /* Forzamos la altura pequeña en celular para ganarle al HTML */
 
   }
 
   .parallax img {
-    height: auto !important; /* Reseteamos el alto para que no se colapse ni se vea negro */
-    min-height: 100% !important; /* Evita que la imagen se deforme o desaparezca con contenedores bajitos */
+    height: auto !important;
+    /* Reseteamos el alto para que no se colapse ni se vea negro */
+    min-height: 100% !important;
+    /* Evita que la imagen se deforme o desaparezca con contenedores bajitos */
     object-fit: initial !important;
-    opacity: 0.5 !important; /* Aseguramos que mantenga la transparencia */
+    opacity: 0.5 !important;
+    /* Aseguramos que mantenga la transparencia */
   }
 }

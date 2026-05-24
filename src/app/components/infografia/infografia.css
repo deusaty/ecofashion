@@ -1,27 +1,45 @@
 .infografiaGreen {
+    background-color: transparent;
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
-    padding: 20px;
-    gap: 16px;
+    padding: 24px 0;
+    gap: 20px;
 }
 
-h5 {
+.infografiaGreen h5,
+.infografiaGreen p {
+    color: #ffffff;
+    margin: 0;
+}
+
+.infografiaGreen h5 {
     font-weight: bold;
-
+    margin-bottom: 12px;
 }
 
-.infografiaPie {
-    border-top-width: 1px;
-    border-top-style: solid;
-    border-top-color: #ccc;
+.infografiaGreen p {
+    margin-bottom: 16px;
 }
 
 .infografiaBox {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #A1A1A1;
+    border: 1px solid #A1A1A1;
     background-color: #506146;
     border-radius: 10px;
-    padding: 16px;
-    flex: 1;
+    padding: 20px;
+    flex: 1 1 280px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.infografiaPie {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 12px;
+}
+
+.infografiaPie p {
+    font-weight: bold;
+    margin-bottom: 0;
 }

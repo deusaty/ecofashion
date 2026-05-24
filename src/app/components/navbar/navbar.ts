@@ -10,13 +10,22 @@ import * as M from 'materialize-css';
 export class NavbarComponent implements AfterViewInit {
 
   ngAfterViewInit() {
-
     const elems = document.querySelectorAll('.sidenav');
-    
 
     M.Sidenav.init(elems, {
-      edge: 'left',  
-      draggable: true  
+      edge: 'left',
+      draggable: true
     });
+  }
+
+  // === AGREGA ESTA FUNCIÓN AQUÍ ABAJO ===
+  cerrarMenu() {
+    const elementoMenu = document.getElementById('mobile-nav');
+    // Usamos el objeto 'M' que ya tienes importado arriba
+    const instanciaSidenav = M.Sidenav.getInstance(elementoMenu as Element);
+
+    if (instanciaSidenav) {
+      instanciaSidenav.close();
+    }
   }
 }

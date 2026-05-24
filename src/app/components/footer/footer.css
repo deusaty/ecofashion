@@ -33,10 +33,6 @@ a {
   text-align: left;
 }
 
-.footerItem {
-
-}
-
 h5 {
   color: white;
   font-weight: bold;
@@ -49,6 +45,6 @@ p {
 }
 
 .colorFooter {
-    color: black;
-    font-weight: 400;
+  color: black;
+  font-weight: 400;
 }
