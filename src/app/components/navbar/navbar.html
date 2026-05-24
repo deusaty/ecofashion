@@ -12,11 +12,11 @@
       </a>
 
       <ul class="right hide-on-med-and-down">
-        <li><a href="#inicio" class="waves-effect waves-light"><i class="material-icons left">home</i>Inicio</a></li>
-        <li><a href="#info" class="waves-effect waves-light"><i class="material-icons left">info_outline</i>Impacto</a>
+        <li><a href="#inicio" class="navbarLinks"><i class="material-icons left">home</i>Inicio</a></li>
+        <li><a href="#info" class="navbarLinks"><i class="material-icons left">info_outline</i>Impacto</a>
         </li>
-        <li><a href="#comparador" class="waves-effect waves-light"><i
-              class="material-icons left">compare_arrows</i>Comparador</a></li>
+        <li><a href="#comparador" class="navbarLinks"><i class="material-icons left">compare_arrows</i>Comparador</a>
+        </li>
       </ul>
 
     </div>
@@ -32,9 +32,8 @@
   </li>
 
 
-  <li><a href="#inicio" class="waves-effect" (click)="cerrarMenu()"><i class="material-icons">home</i>Inicio</a></li>
-  <li><a href="#info" class="waves-effect" (click)="cerrarMenu()"><i class="material-icons">info_outline</i>Impacto
+  <li><a href="#inicio" (click)="cerrarMenu()"><i class="material-icons">home</i>Inicio</a></li>
+  <li><a href="#info" (click)="cerrarMenu()"><i class="material-icons">info_outline</i>Impacto
       Ambiental</a></li>
-  <li><a href="#comparador" class="waves-effect" (click)="cerrarMenu()"><i
-        class="material-icons">compare_arrows</i>Comparador</a></li>
+  <li><a href="#comparador" (click)="cerrarMenu()"><i class="material-icons">compare_arrows</i>Comparador</a></li>
 </ul>

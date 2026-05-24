@@ -24,13 +24,17 @@ export class ComparatorComponent {
     return {
       labels: ['Agua (L)', 'CO2 (kg)'],
       datasets: [
-        { 
-          data: [this.textileService.waterA(), this.textileService.co2A()], 
-          label: this.textileService.selectedA()?.name || 'Material A' 
+        {
+          data: [this.textileService.waterA(), this.textileService.co2A()],
+          label: this.textileService.selectedA()?.name || 'Material A',
+          backgroundColor: 'rgba(135, 152, 106, 0.7)',
+          borderColor: 'rgba(135, 152, 106, 1)'
         },
-        { 
-          data: [this.textileService.waterB(), this.textileService.co2B()], 
-          label: this.textileService.selectedB()?.name || 'Material B' 
+        {
+          data: [this.textileService.waterB(), this.textileService.co2B()],
+          label: this.textileService.selectedB()?.name || 'Material B',
+          backgroundColor: 'rgba(210, 123, 84, 0.7)',
+          borderColor: 'rgba(210, 123, 84, 1)'
         }
       ]
     };

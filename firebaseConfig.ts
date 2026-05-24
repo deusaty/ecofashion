@@ -8,13 +8,13 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyCk6Y1Q3_7MFAH6ApZQ8aLclNHgl2WhkjM",
-  authDomain: "echofashion-cfb94.firebaseapp.com",
-  projectId: "echofashion-cfb94",
-  storageBucket: "echofashion-cfb94.firebasestorage.app",
-  messagingSenderId: "239553105153",
-  appId: "1:239553105153:web:86aa6fb049ba8541211f00",
-  measurementId: "G-N2Y8ZS92T0"
+  apiKey: "AIzaSyATYZfVxHsEj012k2jHJnrF2whkS4MxQto",
+  authDomain: "ecofashion-a2c13.firebaseapp.com",
+  projectId: "ecofashion-a2c13",
+  storageBucket: "ecofashion-a2c13.firebasestorage.app",
+  messagingSenderId: "396102663692",
+  appId: "1:396102663692:web:ac9df563b7883d1741f829",
+  measurementId: "G-ETJT71JQXV"
 };
 
 // Initialize Firebase
