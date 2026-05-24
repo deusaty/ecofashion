@@ -7,11 +7,12 @@ import { Infografia } from './components/infografia/infografia';
 import { ComparatorComponent } from './components/comparator/comparator';
 
 declare var M: any;
+import { Form } from './components/form/form';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, Mainheader, NavbarComponent, Footer, Infografia, ComparatorComponent],
+  imports: [Mainheader, NavbarComponent, Footer, Infografia, ComparatorComponent, Form],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

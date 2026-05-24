@@ -2,38 +2,39 @@ html {
   scroll-behavior: smooth;
 }
 
+/* --- CONFIGURACIÓN GENERAL (ESCRITORIO) --- */
 .parallax-container {
-  height: 400px;
+  height: 150px; /* Altura a la mitad en computadoras */
+
 }
 
+/* Forzamos la opacidad aquí con !important para que el JS de Materialize no la rompa al actualizar */
+.parallax img {
+  opacity: 0.5 !important; 
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+
+/* --- ADAPTACIÓN A PANTALLAS MEDIANAS (TABLETS) --- */
 @media only screen and (max-width: 992px) {
   .parallax-container {
-    height: 350px;
-    /* Reducimos la altura para que la imagen no se sature */
+    height: 120px; /* Altura más cómoda para tablets */
   }
 }
 
+
+/* --- ADAPTACIÓN A PANTALLAS CHICAS (MÓVILES) --- */
 @media only screen and (max-width: 600px) {
   .parallax-container {
-    height: 250px;
-    /* Una franja ideal para móviles */
+    height: 70px !important; /* Forzamos la altura pequeña en celular para ganarle al HTML */
+
   }
 
   .parallax img {
-    width: 100% !important;
-    object-fit: cover !important;
-    /* Evita que el script de Materialize mueva la imagen de forma brusca en iOS */
-    transform: translate3d(-50%, 0, 0) !important;
-    bottom: 0 !important;
-  }
-
-  /* Controlar el comportamiento de la imagen dentro del parallax */
-  .parallax-container .parallax img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    /* Fuerza a la imagen a cubrir el espacio manteniendo su proporción */
-    object-position: center center !important;
-    /* Centra el foco de la imagen */
+    height: auto !important; /* Reseteamos el alto para que no se colapse ni se vea negro */
+    min-height: 100% !important; /* Evita que la imagen se deforme o desaparezca con contenedores bajitos */
+    object-fit: initial !important;
+    opacity: 0.5 !important; /* Aseguramos que mantenga la transparencia */
   }
 }

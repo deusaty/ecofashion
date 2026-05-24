@@ -1,0 +1,19 @@
+.btn {
+    border-radius: 16px;
+    background-color: #506146;
+    margin-bottom: 32px;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #404e38;
+}
+
+/* Cambiar el color del borde de los inputs cuando son correctos */
+.input-field input.valid,
+.input-field input:focus.valid,
+.input-field textarea.materialize-textarea.valid,
+.input-field textarea.materialize-textarea:focus.valid {
+    border-bottom: 1px solid #2E7D32 !important;
+    box-shadow: 0 1px 0 0 #2E7D32 !important;
+}

@@ -1,0 +1,54 @@
+<div class="container">
+    <h4 class="center-align green-text text-darken-3">Formulario de contacto</h4>
+
+    <form [formGroup]="formulario" (ngSubmit)="guardarDatos()" class="col s12">
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="nombre" type="text" formControlName="nombre" class="validate">
+                <label for="nombre">Nombre completo</label>
+
+                <span class="helper-text red-text" data-error="Solo se permiten letras"
+                    *ngIf="formulario.get('nombre')?.invalid && formulario.get('nombre')?.touched">
+                    Solo se permiten letras y espacios
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="telefono" type="tel" formControlName="telefono" class="validate">
+                <label for="telefono">Teléfono</label>
+
+                <span class="helper-text red-text" data-error="Debe contener 10 números"
+                    *ngIf="formulario.get('telefono')?.invalid && formulario.get('telefono')?.touched">
+                    Ingresa un número válido de 10 dígitos
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="email" type="email" formControlName="email" class="validate">
+                <label for="email">Correo electrónico</label>
+
+                <span class="helper-text red-text" data-error="Correo inválido"
+                    *ngIf="formulario.get('email')?.invalid && formulario.get('email')?.touched">
+                    Ingresa un correo válido
+                </span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <textarea id="comentarios" formControlName="comentarios" class="materialize-textarea"></textarea>
+                <label for="comentarios">Comentarios</label>
+            </div>
+        </div>
+
+        <button class="btn waves-effect waves-light" type="submit" [disabled]="formulario.invalid">
+            Enviar
+        </button>
+
+    </form>
+</div>

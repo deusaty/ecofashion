@@ -10,13 +10,13 @@ import * as M from 'materialize-css';
 export class NavbarComponent implements AfterViewInit {
 
   ngAfterViewInit() {
-    // Buscamos todos los elementos con la clase .sidenav
+
     const elems = document.querySelectorAll('.sidenav');
     
-    // Los inicializamos con la librería de Materialize
+
     M.Sidenav.init(elems, {
-      edge: 'left',      // Sale de la izquierda
-      draggable: true    // Permite arrastrarlo con el dedo en celular
+      edge: 'left',  
+      draggable: true  
     });
   }
 }
