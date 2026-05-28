@@ -5,6 +5,7 @@ import { NavbarComponent } from './components/navbar/navbar';
 import { Footer } from './components/footer/footer';
 import { Infografia } from './components/infografia/infografia';
 import { ComparatorComponent } from './components/comparator/comparator';
+import { Simulador } from './components/simulador/simulador';
 
 declare var M: any;
 import { Form } from './components/form/form';
@@ -12,7 +13,7 @@ import { Form } from './components/form/form';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Mainheader, NavbarComponent, Footer, Infografia, ComparatorComponent, Form],
+  imports: [Mainheader, NavbarComponent, Footer, Infografia, ComparatorComponent, Form, Simulador],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })

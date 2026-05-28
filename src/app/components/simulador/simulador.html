@@ -1,0 +1,89 @@
+<div class="simulador-container container">
+  
+  <div class="row">
+    <div class="col s12 center-align">
+      <h4 class="simulador-main-title" style="color: #2E7D32; font-weight: bold; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px;">
+        Simulador de Decisiones Sostenibles
+      </h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col s12 m10 l8 offset-m1 offset-l2">
+      @if (pasoActual >= 0) {
+        <div class="card grey lighten-4 z-depth-3 dynamic-card">
+          <div class="card-content">
+            <div class="progress grey lighten-2">
+              <div class="determinate" [style.background-color]="'#506146'" [style.width.%]="((pasoActual + 1) / escenarios.length) * 100"></div>
+            </div>
+            <p class="right-align grey-text text-darken-1 step-counter">
+              Pregunta {{ pasoActual + 1 }} de {{ escenarios.length }}
+            </p>
+
+            <span class="card-title center-align main-title" style="color: #506146;">
+              {{ escenarios[pasoActual].titulo }}
+            </span>
+            
+            <p class="flow-text center-align description-text">
+              {{ escenarios[pasoActual].descripcion }}
+            </p>
+
+            @if (mostrarConsecuencia) {
+              <div class="card-panel green lighten-5 alert-panel animated fadeIn">
+                <div class="valign-wrapper">
+                  <i class="material-icons left warning-icon">info_outline</i>
+                  <span class="consecuencia-txt">{{ consecuenciaActual }}</span>
+                </div>
+              </div>
+            }
+          </div>
+          
+          <div class="card-action action-area">
+            @if (!mostrarConsecuencia) {
+              @for (opcion of escenarios[pasoActual].opciones; track $index) {
+                <button (click)="seleccionarOpcion(opcion)" 
+                        class="btn-large waves-effect waves-light text-btn">
+                  {{ opcion.texto }}
+                </button>
+              }
+            } @else {
+              <button (click)="siguientePaso()" 
+                      class="btn-large waves-effect waves-light text-btn next-btn">
+                Entendido, ver siguiente caso
+                <i class="material-icons right">arrow_forward</i>
+              </button>
+            }
+          </div>
+        </div>
+      }
+
+      @if (pasoActual === -1) {
+        <div class="card green lighten-5 z-depth-4 center-align final-card animated fadeIn">
+          <div class="card-content green-text text-darken-4">
+            <span class="card-title green-text text-darken-3">
+              <h4>Evaluación de Hábitos</h4>
+            </span>
+            
+            <div class="icon-container">
+              <i class="material-icons large-icon" style="color: #506146;">spa</i>
+            </div>
+            
+            <h5 class="perfil-title font-weight-bold black-text">{{ perfilFinal }}</h5>
+            
+            <p class="flow-text text-darken-3 summary-text">
+              {{ descripcionPerfil }}
+            </p>
+          </div>
+          
+          <div class="card-action action-area">
+            <button (click)="reiniciarSimulador()" class="btn-large waves-effect waves-light text-btn">
+              Volver a simular decisiones
+              <i class="material-icons right">refresh</i>
+            </button>
+          </div>
+        </div>
+      }
+
+    </div>
+  </div>
+</div>
